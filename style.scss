@@ -1,0 +1,107 @@
+@import "./partials/reset";
+@import "./partials/color";
+@import "./partials/font";
+@import "./partials/spacing";
+@import "./partials/mixins";
+@import "./partials/buttons";
+@import "./partials/animations";
+
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-md, $spacing-xl;
+    background-color: $bg-hero;
+
+
+a {
+    color: $text-color;
+    text-decoration: none;
+    margin: 0 $spacing-sm;
+    font-size: $font-size-text;
+}
+
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $bg-hero;
+    padding: $spacing-xl;
+    color: $text-color;
+
+    .hero-text {
+        max-width: 600px;
+
+        h1 {
+            @include spacing(margin, bottom, $spacing-md);
+            font-size: 2.5rem;
+            color: $button-primary;
+        }
+        p{
+            @include spacing(margin, bottom, $spacing-md);
+            font-size: 1rem;
+        };
+        .hero-buttons {
+            display: flex;
+            gap: $spacing-sm;
+
+            .button-primary {
+                background-color: $button-primary;
+                color: $text-color;
+                padding: $spacing-sm $spacing-md;
+                border: none;
+                border-radius: 4px;
+                &:hover {
+                    background-color: darken($color: $button-primary, $amount: 10%);
+                }
+            }
+        }
+    }
+    .hero-image {
+        width: 50%;
+    }
+}
+
+.grid {
+    @include grid-layout($columns);
+    padding: $spacing-lg;
+    background-color: $text-color;
+
+    .grid-item {
+        padding: $spacing-md;
+        border: 1px solid $text-color;
+        text-align: center;
+
+        h3{
+            font-size: 1.25rem;
+            color: $button-primary;
+        }
+        p{
+            font-size: $font-size-text;
+            color: $text-color;
+        }
+
+
+        .button-secondary{
+            background-color: $button-secondary;
+            color: $text-color;
+            padding: $spacing-sm $spacing-md;
+            border: none;
+            border-radius: 4px;
+            &:hover {
+                background-color: darken($color: $button-secondary, $amount: 10%);
+            }
+        }
+    }
+
+}
+
+.hero, .grid-item{
+    @include fade-slide-down()
+
+}
+

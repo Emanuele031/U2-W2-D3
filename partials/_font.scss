@@ -1,0 +1,15 @@
+
+
+
+$font-primary: Arial, sans-serif;
+$font-size-title: 2.5rem;
+$font-size-text: 1rem;
+
+
+@mixin title-big {
+    font-size: $font-size-title;
+    font-weight: bold;
+    
+}
+
+

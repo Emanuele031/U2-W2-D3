@@ -1,0 +1,28 @@
+@mixin button-base {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    margin: 0.5rem;
+
+
+}
+.button-primary {
+    @include button-base;
+    background-color: $button-primary;
+    color: $text-color;
+    
+}
+
+.button-secondary {
+    @include button-base;
+    background-color: $button-secondary;
+    color: $text-color;
+}
+
+.button-tertiary{
+    @include button-base;
+    background-color: $button-tertiary;
+    color: $text-color;
+}
